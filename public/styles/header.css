@@ -1,0 +1,39 @@
+
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #D79B27;
+  background-image: url("/images/cubes.png");
+  background-size: center;
+  background-position: center;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+}
+
+header div:last-child {
+  text-align: center;
+}
+
+header .profile-name {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+}
+
+header .bold-title {
+  font-weight: 600;
+}
