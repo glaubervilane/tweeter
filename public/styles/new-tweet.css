@@ -13,10 +13,18 @@
 .new-tweet label {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  border-bottom: 3px solid #4056A1;
-  padding-bottom: 5px;
   display: block;
 }
+.new-tweet textarea {
+  border: none;
+  border-bottom: 3px solid #4056A1;
+  width: 100%;
+  height: 2em;
+  padding: 5px;
+  resize: none;
+  background-color: transparent;
+}
+
 .new-tweet button[type="submit"] {
   font-family: "Bungee";
   background-color: #4056A1;
