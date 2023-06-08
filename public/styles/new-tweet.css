@@ -17,6 +17,7 @@
 }
 .new-tweet textarea {
   border: none;
+  outline: none;
   border-bottom: 3px solid #4056A1;
   width: 100%;
   height: 2em;
@@ -43,4 +44,7 @@
 .new-tweet output.counter {
   text-align: right;
   font-family: "Bungee";
+}
+.new-tweet .counter.invalid {
+  color: red;
 }
