@@ -14,7 +14,7 @@ nav {
 nav span.logo {
   font-family: "Bungee";
 }
-.new-tweet {
+.new-tweet-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,12 +23,12 @@ nav span.bold-title {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
 }
-.new-tweet .tweet-text {
+.new-tweet-nav .tweet-text {
   margin-right: 0.5em;
   font-family: "Source Sans Pro";
 }
 
-.new-tweet i {
+.new-tweet-nav i {
   font-size: 1.5em;
   color: #DE402E;
 }
