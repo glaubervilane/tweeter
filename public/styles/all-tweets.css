@@ -1,0 +1,68 @@
+.all-tweets {
+  display: flex;
+  border: 3px solid #000;
+  margin: 2% 20%;
+}
+
+.all-tweets .tweet {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.all-tweets .tweet header {
+  height: 200px;
+  background-color: #F4F1EC;
+  color: #000;
+  align-items: flex-start;
+}
+
+.all-tweets .tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+.all-tweets .tweet header img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.all-tweets .tweet header h3 {
+  margin: 0;
+}
+
+.all-tweets .tweet header output {
+  margin-left: auto;
+  font-weight: bold;
+  color: #bababa;
+}
+
+.all-tweets .tweet p::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #000;
+  margin-top: 10px;
+}
+
+.all-tweets .tweet footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all-tweets .tweet footer output {
+  margin: 0;
+  font-size: medium;
+}
+
+.all-tweets .tweet footer i {
+  margin-left: 5px;
+}
+
+.all-tweets .tweet footer i:hover {
+  color: red;
+}
+
+.all-tweets:hover {
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
+}
