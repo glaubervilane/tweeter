@@ -1,68 +1,82 @@
-.all-tweets {
+.all-tweets,
+#tweets-container {
   display: flex;
   border: 3px solid #000;
   margin: 2% 20%;
 }
 
-.all-tweets .tweet {
+.all-tweets .tweet,
+#tweets-container .tweet {
   width: 90%;
   margin: 0 auto;
 }
 
-.all-tweets .tweet header {
+.all-tweets .tweet header,
+#tweets-container .tweet header {
   height: 200px;
   background-color: #F4F1EC;
   color: #000;
   align-items: flex-start;
 }
 
-.all-tweets .tweet header div {
+.all-tweets .tweet header div,
+#tweets-container .tweet header div {
   display: flex;
   align-items: center;
 }
 
-.all-tweets .tweet header img {
+.all-tweets .tweet header img,
+#tweets-container .tweet header img {
   width: 60px;
   height: 60px;
   margin-right: 10px;
 }
 
-.all-tweets .tweet header h3 {
+.all-tweets .tweet header h3,
+#tweets-container .tweet header h3 {
   margin: 0;
 }
 
-.all-tweets .tweet header output {
+.all-tweets .tweet header output,
+#tweets-container .tweet header output {
   margin-left: auto;
   font-weight: bold;
   color: #bababa;
 }
 
-.all-tweets .tweet p::after {
+.all-tweets .tweet p::after,
+#tweets-container .tweet p::after {
   content: "";
   display: block;
   border-bottom: 1px solid #000;
   margin-top: 10px;
 }
 
-.all-tweets .tweet footer {
+.all-tweets .tweet footer,
+#tweets-container .tweet footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.all-tweets .tweet footer output {
+.all-tweets .tweet footer output,
+#tweets-container .tweet footer output {
   margin: 0;
   font-size: medium;
 }
 
-.all-tweets .tweet footer i {
+.all-tweets .tweet footer i,
+#tweets-container .tweet footer i {
   margin-left: 5px;
 }
 
-.all-tweets .tweet footer i:hover {
+.all-tweets .tweet footer i:hover,
+#tweets-container .tweet footer i:hover {
   color: red;
 }
 
-.all-tweets:hover {
+.all-tweets:hover,
+#tweets-container:hover {
   box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.3);
 }
+
