@@ -24,7 +24,8 @@ $(document).ready(function() {
   
     const $footer = $("<footer>");
     $("<output>")
-      .text(`Posted on ${formatDate(tweet.created_at)}`)
+      .addClass("timeago")
+      .attr("datetime", tweet.created_at)
       .appendTo($footer);
     const $divIcons = $("<div>").appendTo($footer);
     $("<i>")
@@ -46,53 +47,50 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     const $tweetsContainer = $("#tweets-container");
 
+    $tweetsContainer.empty();
+
     tweets.forEach((tweet) => {
       const $tweetContainer = createTweetElement(tweet);
       $tweetsContainer.after($tweetContainer);
     });
+
+    // Update the time ago formatting for all tweets
+    timeago.render(document.querySelectorAll(".tweet .timeago"));
   };
-
-  // Helper function to format the date
-  const formatDate = function(timestamp) {
-    const date = new Date(timestamp);
-    return date.toLocaleString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
+  
+  const loadTweets = function() {
+    $.ajax({
+      url: "/tweets/",
+      method: "GET",
+      dataType: "json",
+    })
+      .then(function(tweets) {
+        renderTweets(tweets);
+      })
+      .catch(function(error) {
+        console.error("Error loading tweets:", error);
+      });
   };
-
-  // Example data
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1461113959088,
-    },
-  ];
-
-  // Render the tweets
-  renderTweets(data);
+  
+  // Call loadTweets on page load to fetch and render the tweets
+  loadTweets();
+  
 
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
+    
+    const tweetContent = $("#tweet-text").val();
+    const counterElement = $(".counter");
+    
+    if (!tweetContent) {
+      alert("Please enter a tweet!");
+      return;
+    }
+    
+    if (tweetContent.length > 140) {
+      alert("Tweet exceeds the character limit!");
+      return;
+    }
     
     const formData = $(this).serialize();
     
@@ -102,12 +100,29 @@ $(document).ready(function() {
       data: formData,
     })
     .then(function(response) {
-      // Handle the response if needed
       console.log("Tweet submitted successfully!");
+      // Clear the tweet input field
+      $("#tweet-text").val("");
+      // Reset the counter
+      counterElement.text("140");
     })
     .catch(function(error) {
-      // Handle the error if needed
       console.error("Error submitting tweet:", error);
     });
+  });
+
+  $("#tweet-text").on("input", function() {
+    const maxLength = 140;
+    const currentLength = $(this).val().length;
+    const remainingChars = maxLength - currentLength;
+    const counterElement = $(this).siblings(".submit-counter").find(".counter");
+
+    counterElement.text(remainingChars);
+
+    if (remainingChars < 0) {
+      counterElement.addClass("invalid");
+    } else {
+      counterElement.removeClass("invalid");
+    }
   });
 });
