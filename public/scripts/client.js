@@ -90,4 +90,24 @@ $(document).ready(function() {
 
   // Render the tweets
   renderTweets(data);
+
+  $(".tweet-form").submit(function(event) {
+    event.preventDefault();
+    
+    const formData = $(this).serialize();
+    
+    $.ajax({
+      url: "/tweets/",
+      method: "POST",
+      data: formData,
+    })
+    .then(function(response) {
+      // Handle the response if needed
+      console.log("Tweet submitted successfully!");
+    })
+    .catch(function(error) {
+      // Handle the error if needed
+      console.error("Error submitting tweet:", error);
+    });
+  });
 });
