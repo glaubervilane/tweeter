@@ -44,6 +44,13 @@ $(document).ready(function() {
     return $tweetSection;
   };  
 
+  const renderTweet = function(tweet) {
+    const $tweetContainer = createTweetElement(tweet);
+    $("#tweets-container").prepend($tweetContainer);
+    // Update time ago formatting
+    timeago.render($tweetContainer.find(".timeago"));
+  };
+
   const renderTweets = function(tweets) {
     const $tweetsContainer = $("#tweets-container");
 
@@ -99,17 +106,23 @@ $(document).ready(function() {
       method: "POST",
       data: formData,
     })
-    .then(function(response) {
-      console.log("Tweet submitted successfully!");
-      // Clear the tweet input field
-      $("#tweet-text").val("");
-      // Reset the counter
-      counterElement.text("140");
-    })
-    .catch(function(error) {
-      console.error("Error submitting tweet:", error);
+      .then(function(response) {
+        console.log("Tweet submitted successfully!");
+        // Clear the tweet input field
+        $("#tweet-text").val("");
+        // Reset the counter
+        counterElement.text("140");
+        // Render the new tweet
+        loadTweets();
+      })
+      .catch(function(error) {
+        console.error("Error submitting tweet:", error);
+      });
+
+      // Reset the form after submission
+      $(this).trigger("reset");
+      $(".counter").text("140");
     });
-  });
 
   $("#tweet-text").on("input", function() {
     const maxLength = 140;
