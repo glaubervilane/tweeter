@@ -64,6 +64,17 @@ $(document).ready(function() {
     // Update the time ago formatting for all tweets
     timeago.render(document.querySelectorAll(".tweet .timeago"));
   };
+
+  const showError = function(message) {
+    const $errorElement = $("#error-messages");
+    $errorElement.text(message);
+    $errorElement.slideDown();
+  };
+
+  const hideError = function() {
+    const $errorElement = $("#error-messages");
+    $errorElement.slideUp();
+  };
   
   const loadTweets = function() {
     $.ajax({
@@ -90,14 +101,16 @@ $(document).ready(function() {
     const counterElement = $(".counter");
     
     if (!tweetContent) {
-      alert("Please enter a tweet!");
+      showError("Please enter a tweet!");
       return;
     }
     
     if (tweetContent.length > 140) {
-      alert("Tweet exceeds the character limit!");
+      showError("Tweet exceeds the character limit!");
       return;
     }
+    
+    hideError();
     
     const formData = $(this).serialize();
     

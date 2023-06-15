@@ -48,3 +48,12 @@
 .new-tweet .counter.invalid {
   color: red;
 }
+
+#error-messages {
+  color: #f20c0c;
+  border-style: solid;
+  margin-top: 5px;
+  border-color: #f20c0c;
+  padding: 5px;
+  display: none;
+}
