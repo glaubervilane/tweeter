@@ -1,6 +1,8 @@
 /*
  * Additional CSS for nav bar an its elements
  */
+
+/* Mobile Styles */
 nav {
   height: 120px;
   width: 100%;
@@ -35,4 +37,27 @@ nav span.bold-title {
 .new-tweet-nav i {
   font-size: 1.5em;
   color: #DE402E;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav .new-tweet-nav i {
+  font-size: 1.5em;
+  color: #DE402E;
+  animation: bounce 2s infinite;
+}
+
+/* Desktop styles Layout at minimum 1024px*/
+@media only screen and (min-width: 1024px){
+
 }

@@ -1,4 +1,8 @@
+/*
+ * Additional CSS for nav bar an its elements
+ */
 
+/* Mobile Styles */
 header {
   height: 400px;
   width: 100%;
@@ -36,4 +40,9 @@ header .profile-name {
 
 header .bold-title {
   font-weight: 600;
+}
+
+/* Desktop styles Layout at minimum 1024px*/
+@media only screen and (min-width: 1024px){
+
 }
