@@ -6,7 +6,8 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #D79B27;  
+  background-image: url("/images/az-subtle.png");
   color: #FFFFFF;
   padding: 0 1.5em;
   display: flex;
@@ -59,5 +60,58 @@ nav .new-tweet-nav i {
 
 /* Desktop styles Layout at minimum 1024px*/
 @media only screen and (min-width: 1024px){
-
+  nav {
+    height: 120px;
+    width: 100%;
+    background-color: #4056A1;  
+    background-image: url("/images/az-subtle.png") transparent;
+    color: #FFFFFF;
+    padding: 0 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav span.logo {
+    font-family: "Bungee";
+  }
+  
+  .new-tweet-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav span.bold-title {  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+  }
+  
+  .new-tweet-nav .tweet-text {
+    margin-right: 0.5em;
+    font-family: "Source Sans Pro";
+  }
+  
+  .new-tweet-nav i {
+    font-size: 1.5em;
+    color: #DE402E;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  nav .new-tweet-nav i {
+    font-size: 1.5em;
+    color: #DE402E;
+    animation: bounce 2s infinite;
+  }
 }

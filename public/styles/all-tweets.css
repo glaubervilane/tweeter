@@ -15,6 +15,7 @@
 #tweets-container .tweet header {
   height: 200px;
   background-color: #F4F1EC;
+  background-image: none;
   color: #000;
   align-items: flex-start;
 }
