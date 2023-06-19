@@ -33,8 +33,8 @@ Once the project is running locally, open your browser and navigate to <http://l
 
 ## Screenshots
 
-[Desktop Image](https://github.com/glaubervilane/tweeter/blob/master/docs/tweeter-desktop-image.png)
-[Small devices image](https://github.com/glaubervilane/tweeter/blob/master/docs/tweeter-small-devices.png)
+- [Desktop Image](https://github.com/glaubervilane/tweeter/blob/master/docs/tweeter-desktop-image.png)
+- [Small devices image](https://github.com/glaubervilane/tweeter/blob/master/docs/tweeter-small-devices.png)
 
 ## License
 
