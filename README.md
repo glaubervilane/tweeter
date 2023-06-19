@@ -31,9 +31,10 @@ Once the project is running locally, open your browser and navigate to <http://l
 - Express
 - Node 5.10.x or above
 
-## Dependencies
+## Screenshots
 
-Screenshots [Here](https://github.com/glaubervilane/tweeter/tree/master/docs)
+[Desktop Image](https://github.com/glaubervilane/tweeter/blob/master/docs/tweeter-desktop-image.png)
+[Small devices image](https://github.com/glaubervilane/tweeter/blob/master/docs/tweeter-small-devices.png)
 
 ## License
 
