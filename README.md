@@ -31,6 +31,10 @@ Once the project is running locally, open your browser and navigate to <http://l
 - Express
 - Node 5.10.x or above
 
+## Dependencies
+
+Screenshots [Here](https://docs.github.com/en/repositories/docs)
+
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE).
