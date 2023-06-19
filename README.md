@@ -33,7 +33,7 @@ Once the project is running locally, open your browser and navigate to <http://l
 
 ## Dependencies
 
-Screenshots [Here](https://docs.github.com/en/repositories/docs)
+Screenshots [Here](https://github.com/glaubervilane/tweeter/tree/master/docs)
 
 ## License
 
