@@ -43,6 +43,47 @@ header .bold-title {
 }
 
 /* Desktop styles Layout at minimum 1024px*/
-@media only screen and (min-width: 1024px){
-
+@media only screen and (min-width: 1024px) and (max-width: 9999px){
+  header {
+    height: 400px;
+    width: 400px;
+    background-color: #D79B27;
+    background-image: url("/images/az-subtle.png");
+    background-position: left center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+    margin-top: 90px;
+    margin-left: 50px;
+  }
+  
+  header div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+  }
+  
+  header img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  header div:last-child {
+    display: flex;
+    text-align: center;
+    margin-left: 35px;
+  }
+  
+  header .profile-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+  }
+  
+  header .bold-title {
+    font-weight: 600;
+  }
 }

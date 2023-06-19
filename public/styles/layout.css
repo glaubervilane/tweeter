@@ -24,7 +24,17 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main {
+/* Mobile Styles */
+main {
   margin: 0 auto;
   background-color: inherit;
+}
+
+/* Desktop styles Layout at minimum 1024px*/
+@media only screen and (min-width: 1024px) and (max-width: 9999px){
+  main {
+    margin-left: 450px;
+    margin-top: -440px;
+    background-color: inherit;
+  }
 }

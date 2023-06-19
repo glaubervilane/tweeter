@@ -17,7 +17,7 @@ $(document).ready(function() {
       .attr("alt", "User Avatar")
       .appendTo($div);
     $("<h3>").text(tweet.user.name).appendTo($div);
-    $("<output>").text(tweet.user.handle).appendTo($header);
+    $("<output>").text(tweet.user.handle).appendTo($div);
     $header.appendTo($tweet);
   
     $("<p>").text(tweet.content.text).appendTo($tweet);
