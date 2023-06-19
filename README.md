@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone AJAX-based that uses JQuery, HTML5 and plain ol' CSS3.
 
-This repository is the way to help to improve front end skills along of using HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, Express back-end skills as well as implementing responsive designs.
+This repository is the way to help to improve front end skills along of using HTML, CSS, JS, jQuery and AJAX, Node, Express back-end skills as well as implementing responsive designs.
 
 ## Getting Started
 
