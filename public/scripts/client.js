@@ -44,13 +44,6 @@ $(document).ready(function() {
     return $tweetSection;
   };  
 
-  const renderTweet = function(tweet) {
-    const $tweetContainer = createTweetElement(tweet);
-    $("#tweets-container").prepend($tweetContainer);
-    // Update time ago formatting
-    timeago.render($tweetContainer.find(".timeago"));
-  };
-
   const renderTweets = function(tweets) {
     const $tweetsContainer = $("#tweets-container");
 
